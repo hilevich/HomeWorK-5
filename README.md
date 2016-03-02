@@ -1,5 +1,7 @@
-# 1 fdfdfd
-fgfgf
+# HomeWork-5 (part 1)
+Program greenhouse;
+
+_______________________________________________
 gfgfgdgfdhgfd
 gdfgfdg
 # 2
