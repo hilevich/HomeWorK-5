@@ -60,7 +60,12 @@ public class main {
 		 }
 		
 		
+		 
+		 
+		 
 		System.out.println("1 - change temperature; 2 - change humidity; 3 - change lights; 4 - vale of greenhouse: 5 - exit ");
+		
+		
 		System.out.println("take your chose:");
 		
 		
@@ -77,18 +82,18 @@ public class main {
         switch (vik){
 		
         			case 1:{System.out.println("1 - your chose change temperatur:");
-        			temperature = change.changeTemperature();
+        			temperature = change.changeTemperature(minTemperature, maxTemperature);
 			
         				break;
         			}
 				
         				case 2:{System.out.println("2 - your chose change humidity");
-        				humidity = change.changeHumidity();
+        				humidity = change.changeHumidity(minTemperature, maxTemperature);
         				break;
         			}
 			
         				case 3:{System.out.println("3 - your chose change lights");
-        				lights = change.changeLights();
+        				lights = change.changeLights(minTemperature, maxTemperature);
 		
         				break;
         			}
