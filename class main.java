@@ -28,9 +28,9 @@ public class main {
 		 
 		 if (((maxTemperature > temperature)&&(minTemperature<temperature))&&((maxHumidity>humidity)&&(minHumidity<humidity))&&((maxLights>lights)&&(minLights<lights))){
 			System.out.println("vale of greenhouse is:");
-			 sens.valeTemperature();
-			 sens.valehumidite();
-			 sens.valeLight();
+			 sens.valeTemperature(minLights);
+			 sens.valehumidite(minLights);
+			 sens.valeLight(minLights);
 			
 			 
 		 }
@@ -40,7 +40,7 @@ public class main {
 			 temperature = newControl.changeValeTemperature(temperature);
 			 humidity =newControl.changeValeHumidity(humidity);
 			 lights = newControl.changeValeLights(lights);
-			 onOffControlMassage.message1();
+			 onOffControlMassage.message1(temperature, humidity, lights);
 		 }
 		
 		
@@ -78,9 +78,9 @@ public class main {
         			}
 			
         				case 4:{System.out.println("4 - vale of greenhouse:");
-        				sens.valeTemperature();
-        				sens.valehumidite();
-        				sens.valeLight();
+        				sens.valeTemperature(temperature);
+        				sens.valehumidite(humidity);
+        				sens.valeLight(lights);
         				break;
         				}
         				
@@ -104,3 +104,5 @@ public class main {
 	
 	
 	}
+
+
