@@ -53,8 +53,8 @@ public class main {
 			 
 			System.out.println("vale of greenhouse is:");
 			 sens.valeTemperature(temperature);
-			 sens.valehumidite(humidity);
-			 sens.valeLight(lights);
+			 sens.valeHumidity(humidity);
+			 sens.valeLights(lights);
 			
 			 
 		 }
@@ -96,7 +96,7 @@ public class main {
 			try{
 		Scanner scan= new Scanner(System.in);
         int vik=scan.nextInt();
-			if (vik>5||vik <=1)
+			if (vik>5||vik <1)
 			{
 				System.out.println("your chose don't true");
 			}
@@ -122,8 +122,8 @@ public class main {
 		// show to display vale of temperature, humidity, lights;
         				case 4:{System.out.println("4 - vale of greenhouse:");
         				sens.valeTemperature(temperature);
-        				sens.valehumidite(humidity);
-        				sens.valeLight(lights);
+        				sens.valeHumidity(humidity);
+        				sens.valeLights(lights);
         				break;
         				}
         	// exit			
@@ -147,5 +147,3 @@ public class main {
 	
 	
 	}
-
-
