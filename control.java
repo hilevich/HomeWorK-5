@@ -2,20 +2,20 @@ package greenhouse;
 
 public class control {
 
-	public double chengeTemperature(double temperature) {
+	public double changeTemperature(double temperature) {
 		
 		return temperature;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double chengeHumidity(double humidity) {
+	public double changeHumidity(double humidity) {
 		return humidity;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double chengeLights(double lights) {
+	public double changeLights(double lights) {
 		return lights;
 		// TODO Auto-generated method stub
 		
