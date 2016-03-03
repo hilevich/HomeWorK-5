@@ -2,23 +2,18 @@ package greenhouse;
 
 public class onOffСontrol {
 
-	public void error() {
-	System.out.println("помила");		
-	
-	
-	}
 	
 	
 	public class massege{
 		
-		void message1(){
+		void message1(double temperature, double humidity, double lights){
 			System.out.println("смс");
 		}
 	}
 
 
 	public double changeValeTemperature(double temperature) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
 		return temperature;
 	}
 
