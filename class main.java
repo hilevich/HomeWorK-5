@@ -1,8 +1,12 @@
 public class KeywordEnter {
 	 public static void main(String args[]) { 
-	      double temperature = 45;// цельсій
-	      double humidity = 90; // відсотків
-	      double lighting = 500; // моль на м2
+	     // temperature - - - - - - цельсій
+	     // humidity- - - - - -  відсотків
+	     // lighting   -   - - - моль на м2
+	      
+	        double temperature, humidity, lights;
+		double maxTemperature = 60, maxHumidity= 100, maxLights=500;
+		double minTemperature = 18, minHumidity= 100, minLights=500;
 	 
 	 
 	        }
