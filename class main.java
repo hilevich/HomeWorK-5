@@ -16,9 +16,9 @@ public class main {
 		
 		double minTemperature = 18, minHumidity= 60, minLights=300;
 		
-		 temperature = 40;
+		 temperature = 990;
 		 humidity = 90;
-		 lights = 600;
+		 lights = 550;
 		 
 		 sensors sens = new sensors();
 		 onOffСontrol newControl = new onOffСontrol();
@@ -26,21 +26,37 @@ public class main {
 		 
 		    onOffСontrol.massege onOffControlMassage = newControl.new massege(); 
 		 
-		 if (((maxTemperature > temperature)&&(minTemperature<temperature))&&((maxHumidity>humidity)&&(minHumidity<humidity))&&((maxLights>lights)&&(minLights<lights))){
+		 if ((maxTemperature > temperature)&&(minTemperature<temperature)&&(maxHumidity>humidity)&&(minHumidity<humidity)&&(maxLights>lights)&&(minLights<lights))
+		 {
 			System.out.println("vale of greenhouse is:");
-			 sens.valeTemperature(minLights);
-			 sens.valehumidite(minLights);
-			 sens.valeLight(minLights);
+			 sens.valeTemperature(temperature);
+			 sens.valehumidite(humidity);
+			 sens.valeLight(lights);
 			
 			 
 		 }
 		 else
-		 {
+		 { onOffControlMassage.message1(temperature, humidity, lights);
+		 
+			if (!(maxTemperature > temperature)&&(minTemperature<temperature)){
+				temperature = newControl.changeValeTemperature(temperature);
+				
 			
-			 temperature = newControl.changeValeTemperature(temperature);
+			}
+			
+			if(!(maxHumidity>humidity)&&(minHumidity<humidity)){
 			 humidity =newControl.changeValeHumidity(humidity);
+			 
+			 
+			 }
+			
+			if(!(maxLights>lights)&&(minLights<lights))
+				{
 			 lights = newControl.changeValeLights(lights);
-			 onOffControlMassage.message1(temperature, humidity, lights);
+			
+			 
+			}
+			 
 		 }
 		
 		
@@ -61,18 +77,18 @@ public class main {
         switch (vik){
 		
         			case 1:{System.out.println("1 - your chose change temperatur:");
-        			temperature = change.changeTemperature(temperature);
+        			temperature = change.changeTemperature();
 			
         				break;
         			}
 				
         				case 2:{System.out.println("2 - your chose change humidity");
-        				humidity = change.changeHumidity(humidity);
+        				humidity = change.changeHumidity();
         				break;
         			}
 			
         				case 3:{System.out.println("3 - your chose change lights");
-        				lights = change.changeLights(lights);
+        				lights = change.changeLights();
 		
         				break;
         			}
