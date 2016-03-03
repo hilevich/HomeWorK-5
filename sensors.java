@@ -1,26 +1,20 @@
 package greenhouse;
 
-public class control {
+public class sensors {
 
-	public double changeTemperature(double temperature) {
-		
-		return temperature;
+	public void valeTemperature(double temperature) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double changeHumidity(double humidity) {
-		return humidity;
+	public void valehumidite(double humidity) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double changeLights(double lights) {
-		return lights;
+	public void valeLight(double lights) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
 
 }
