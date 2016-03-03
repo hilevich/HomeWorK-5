@@ -1,7 +1,7 @@
 ﻿package greenhouse;
 
 public class onOffControl {	
-	
+		
 	/**
 	 * 
 	 * @param temIndicator – the temperature indicator, if true – enabled, if false – disabled
@@ -10,41 +10,13 @@ public class onOffControl {
 	 */
 	public void checkIndicator(boolean temIndicator, boolean humIndicator, boolean ligIndicator) {	
 		boolean[] indicatorStatus = new boolean[3];
-				
-		if (temIndicator && humIndicator && ligIndicator) {
-			indicatorStatus[0] = true;
-			indicatorStatus[1] = true;
-			indicatorStatus[2] = true;			
-		} else if (temIndicator && humIndicator && !ligIndicator) {
-			indicatorStatus[0] = true;
-			indicatorStatus[1] = true;
-			indicatorStatus[2] = false;
-		} else if (temIndicator && !humIndicator && !ligIndicator) {
-			indicatorStatus[0] = true;
-			indicatorStatus[1] = false;
-			indicatorStatus[2] = false;
-		} else if (!temIndicator && !humIndicator && !ligIndicator) {
-			indicatorStatus[0] = false;
-			indicatorStatus[1] = false;
-			indicatorStatus[2] = false;
-		} else if (!temIndicator && !humIndicator && ligIndicator) {
-			indicatorStatus[0] = false;
-			indicatorStatus[1] = false;
-			indicatorStatus[2] = true;
-		} else if (!temIndicator && humIndicator && ligIndicator) {
-			indicatorStatus[0] = false;
-			indicatorStatus[1] = true;
-			indicatorStatus[2] = true;
-		} else if (temIndicator && !humIndicator && ligIndicator) {
-			indicatorStatus[0] = false;
-			indicatorStatus[1] = true;
-			indicatorStatus[2] = false;
-		} else if (!temIndicator && humIndicator && !ligIndicator) {
-			indicatorStatus[0] = false;
-			indicatorStatus[1] = true;
-			indicatorStatus[2] = false;
-		}	
+		
+		indicatorStatus[0] = temIndicator;
+		indicatorStatus[1] = humIndicator;
+		indicatorStatus[2] = ligIndicator;	
+		
 		new onOffControl.message().messageSMS(indicatorStatus);
+		
 		System.out.println("SMS sent!");
 	}	
 	/**
@@ -62,22 +34,19 @@ public class onOffControl {
 				} else {
 					System.out.println(sensor[i] + "OFF");
 				}
-			}
+			}			
 		}
 	}
-
 
 	public double changeValeTemperature(double temperature) {
 		// TODO Auto-generated method stub	
 		return temperature;
 	}
 
-
 	public double changeValeHumidity(double humidity) {
 		// TODO Auto-generated method stub
 		return humidity;
 	}
-
 
 	public double changeValeLights(double lights) {
 		// TODO Auto-generated method stub
