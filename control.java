@@ -2,21 +2,22 @@ package greenhouse;
 
 public class control {
 
-	public double changeTemperature(double temperature) {
+	public double changeTemperature() {
 		
-		return temperature;
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double changeHumidity(double humidity) {
-		return humidity;
+	public double changeHumidity() {
+		
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public double changeLights(double lights) {
-		return lights;
+	public double changeLights() {
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
