@@ -59,18 +59,18 @@ public class main {
         switch (vik){
 		
         			case 1:{System.out.println("1 - your chose change temperatur:");
-        				change.chengeTemperature(temperature);
+        				change.changeTemperature(temperature);
 			
         				break;
         			}
 				
         				case 2:{System.out.println("2 - your chose change humidity");
-        				change.chengeHumidity(humidity);
+        				change.changeHumidity(humidity);
         				break;
         			}
 			
         				case 3:{System.out.println("3 - your chose change lights");
-        				change.chengeLights(lights);
+        				change.changeLights(lights);
 		
         				break;
         			}
