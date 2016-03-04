@@ -6,8 +6,31 @@ public class onOffСontrol {
 	
 	public class massege{
 		
-		void message1(double temperature, double humidity, double lights){
-			System.out.println("смс");
+		
+
+		public void messageTemperature(double temperature, double temperature2) {
+			
+			
+			
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void messageHumidity(double outHumidity, double humidity) {
+			
+			
+			
+			// TODO Auto-generated method stub
+			
+		}
+
+		
+
+		public void messageLights(double outLights, double lights) {
+			
+			
+			// TODO Auto-generated method stub
+			
 		}
 	}
 
