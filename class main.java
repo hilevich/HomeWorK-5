@@ -34,16 +34,19 @@ public class main {
 		
 		// random vale
 		
-		 temperature = 40;
+		 temperature = 50;
 		 humidity = 90;
-		 lights = 400;
+		 lights = 1000;
 		 
 		 //constructor classes
 		 
- 		 sensors sens = new sensors();
+ 		 
 		 onOffСontrol newControl = new onOffСontrol();
 		 control change = new control();
+		 control.sensorsPrint sensorsPrintVale = change.new sensorsPrint();
 		
+		
+		 
 		 // massege vale of greenhouse else change vale and sent SMS 
 		    onOffСontrol.massege onOffControlMassage = newControl.new massege(); 
 		 
@@ -52,31 +55,35 @@ public class main {
 		 {
 			 
 			System.out.println("vale of greenhouse is:");
-			 sens.valeTemperature(temperature);
-			 sens.valeHumidity(humidity);
-			 sens.valeLights(lights);
+			sensorsPrintVale.valeTemperature(temperature);
+			sensorsPrintVale.valeHumidity(humidity);
+			sensorsPrintVale.valeLights(lights);
 			
 			 
 		 }
 		 else
-		 { onOffControlMassage.message1(temperature, humidity, lights);
+		 { 
 		 
 			if (!(maxTemperature > temperature)&&(minTemperature<temperature)){
-				temperature = newControl.changeValeTemperature(temperature);
-				
+			double	outTemperature = temperature;
+				temperature = newControl.changeValeTemperature(temperature, minTemperature, maxTemperature);
+				onOffControlMassage.messageTemperature(outTemperature, temperature);
 			
 			}
 			
 			if(!(maxHumidity>humidity)&&(minHumidity<humidity)){
-			 humidity =newControl.changeValeHumidity(humidity);
+			double	outHumidity = humidity;
+			 humidity = newControl.changeValeHumidity(humidity, minHumidity, maxHumidity);
+			 onOffControlMassage.messageHumidity(outHumidity, humidity);
 			 
 			 
 			 }
 			
 			if(!(maxLights>lights)&&(minLights<lights))
 				{
-			 lights = newControl.changeValeLights(lights);
-			
+				double	outLights = lights;
+			 lights = newControl.changeValeLights(lights, minLights, maxLights);
+			 onOffControlMassage.messageLights(outLights, lights);
 			 
 			}
 			 
@@ -96,7 +103,7 @@ public class main {
 			try{
 		Scanner scan= new Scanner(System.in);
         int vik=scan.nextInt();
-			if (vik>5||vik <1)
+			if (vik>5||vik <=1)
 			{
 				System.out.println("your chose don't true");
 			}
@@ -105,25 +112,27 @@ public class main {
 		//change vale of temperature 
         			case 1:{System.out.println("1 - your chose change temperatur:");
         			temperature = change.changeTemperature(minTemperature, maxTemperature);
-			
+        			System.out.println("\nteke your next chose");
         				break;
         			}
         //change vale of humidity
         				case 2:{System.out.println("2 - your chose change humidity");
         				humidity = change.changeHumidity(minHumidity, maxHumidity);
+        				System.out.println("\nteke your next chose");
         				break;
         			}
         //change vale of lights
         				case 3:{System.out.println("3 - your chose change lights");
         				lights = change.changeLights(minLights, minLights);
-		
+        				System.out.println("\nteke your next chose");
         				break;
         			}
 		// show to display vale of temperature, humidity, lights;
-        				case 4:{System.out.println("4 - vale of greenhouse:");
-        				sens.valeTemperature(temperature);
-        				sens.valeHumidity(humidity);
-        				sens.valeLights(lights);
+        				case 4:{System.out.println("4 - your chose vale of greenhouse:");
+        				sensorsPrintVale.valeTemperature(temperature);
+        				sensorsPrintVale.valeHumidity(humidity);
+        				sensorsPrintVale.valeLights(lights);
+        				System.out.println("\nteke your next chose");
         				break;
         				}
         	// exit			
@@ -147,3 +156,5 @@ public class main {
 	
 	
 	}
+
+
