@@ -8,7 +8,7 @@ public class onOffСontrol {
 		
 		
 
-		public void messageTemperature(double temperature, double temperature2) {
+		public void messageTemperature(double outTemperature, double temperature) {
 			
 			
 			
