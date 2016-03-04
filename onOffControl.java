@@ -1,23 +1,40 @@
 package greenhouse;
 
+import java.util.Scanner;
+
 public class onOffСontrol {
 
 	
 	
 	public class massege{
 		
+	
+        
 		
 
 		public void messageTemperature(double outTemperature, double temperature) {
-			System.out.println("Temperature " + outTemperature + "C outside the permissible.");
+		
+			
+			
+			// TODO Auto-generated method stub
+			
 		}
 
 		public void messageHumidity(double outHumidity, double humidity) {
-		System.out.println("Humidity " + outHumidity + " outside the permissible.");
+			
+			
+			
+			// TODO Auto-generated method stub
+			
 		}
 
+		
+
 		public void messageLights(double outLights, double lights) {
-		System.out.println("Lights " + outLights + " outside the permissible.");
+			
+			
+			// TODO Auto-generated method stub
+			
 		}
 	}
 
@@ -26,7 +43,7 @@ public class onOffСontrol {
 		if (temperature>maxTemperature||temperature<minTemperature){
 			System.out.println("Temperature is too high \n We start normalizing temperature...");
 			
-			double temperature1 = minTemperature+maxTemperature/2;
+			double temperature1 = (minTemperature+maxTemperature)/2;
 			System.out.println("The temperature is normilized!");
 			return temperature1;
 			
@@ -44,7 +61,7 @@ public class onOffСontrol {
 		if (humidity>maxHumidity||humidity<minHumidity){
 			System.out.println("Humidity is too high \n We start normalizing humidity...");
 			
-			double humidity1 = minHumidity+maxHumidity/2;
+			double humidity1 = (minHumidity+maxHumidity)/2;
 			System.out.println("The humidity is normilized!");
 			return humidity1;
 			
@@ -62,9 +79,9 @@ public class onOffСontrol {
 		if (lights>maxLights||lights<minLights){
 			System.out.println("Lights is too high \n We start normalizing humidity...");
 			
-			double lights1 = minLights+maxLights/2;
-			System.out.println("The lights is normilized!");
-			return lights1;
+		   lights = (minLights+maxLights)/2;
+			System.out.println("The lights is normilized! ");
+			return lights;
 			
 		} else		{
 			System.out.println("System failed to change lights");
