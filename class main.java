@@ -18,7 +18,8 @@ package greenhouse;
 
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
+
+
 
 
 
@@ -100,10 +101,13 @@ public class main {
 		int exit = 1;
 		//do something while user not chose exit
 		while(exit!=0){
-			try{
+		//	try{
+			
 		Scanner scan= new Scanner(System.in);
-        int vik=scan.nextInt();
-			if (vik>5||vik <=1)
+        int vik;
+        if(scan.hasNextInt()){
+        	vik=scan.nextInt();
+			if (vik>5||vik <1)
 			{
 				System.out.println("your chose don't true");
 			}
@@ -111,19 +115,19 @@ public class main {
         switch (vik){
 		//change vale of temperature 
         			case 1:{System.out.println("1 - your chose change temperatur:");
-        			temperature = change.changeTemperature(minTemperature, maxTemperature);
+        			temperature = change.changeTemperature(minTemperature, maxTemperature, temperature);
         			System.out.println("\nteke your next chose");
         				break;
         			}
         //change vale of humidity
         				case 2:{System.out.println("2 - your chose change humidity");
-        				humidity = change.changeHumidity(minHumidity, maxHumidity);
+        				humidity = change.changeHumidity(minHumidity, maxHumidity, humidity);
         				System.out.println("\nteke your next chose");
         				break;
         			}
         //change vale of lights
         				case 3:{System.out.println("3 - your chose change lights");
-        				lights = change.changeLights(minLights, minLights);
+        				lights = change.changeLights(minLights, minLights, lights);
         				System.out.println("\nteke your next chose");
         				break;
         			}
@@ -143,12 +147,14 @@ public class main {
         			 }
 
         		}
-			}catch(Exception e)
+        }else{
+        	System.out.println("your enter not true vale");
+        }
+			}/*catch(Exception e)
 			{
 				JOptionPane.showMessageDialog(null, "your enter not true vale");
 			}
-		
-		}
+		}*/
 		
 			
 		}
