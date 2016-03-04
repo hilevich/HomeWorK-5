@@ -7,37 +7,19 @@ public class onOffСontrol {
 	
 	
 	public class massege{
-		
-	
-        
-		
 
 		public void messageTemperature(double outTemperature, double temperature) {
-		
-			
-			
-			// TODO Auto-generated method stub
-			
+			System.out.println("Failed!\nThe temperature " + outTemperature + " - unacceptable.\nIt was changed to the optimum temperature - " + temperature);
 		}
 
 		public void messageHumidity(double outHumidity, double humidity) {
-			
-			
-			
-			// TODO Auto-generated method stub
-			
+			System.out.println("Failed!\nThe Humidity " + outHumidity + " - unacceptable.\nIt was changed to the optimum humidity - " + humidity);
 		}
-
-		
 
 		public void messageLights(double outLights, double lights) {
-			
-			
-			// TODO Auto-generated method stub
-			
+			System.out.println("Failed!\nThe Lights " + outLights + " - unacceptable.\nIt was changed to the optimum lights - " + lights);
 		}
 	}
-
 
 	public double changeValeTemperature(double temperature, double minTemperature, double maxTemperature) {
 		if (temperature>maxTemperature||temperature<minTemperature){
