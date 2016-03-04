@@ -9,28 +9,15 @@ public class onOffСontrol {
 		
 
 		public void messageTemperature(double outTemperature, double temperature) {
-			
-			
-			
-			// TODO Auto-generated method stub
-			
+			System.out.println("Temperature " + outTemperature + "C outside the permissible.");
 		}
 
 		public void messageHumidity(double outHumidity, double humidity) {
-			
-			
-			
-			// TODO Auto-generated method stub
-			
+		System.out.println("Humidity " + outHumidity + " outside the permissible.");
 		}
 
-		
-
 		public void messageLights(double outLights, double lights) {
-			
-			
-			// TODO Auto-generated method stub
-			
+		System.out.println("Lights " + outLights + " outside the permissible.");
 		}
 	}
 
